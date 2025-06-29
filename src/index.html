@@ -4,20 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Vanilla App Template - goit-js-hw-11 ödevi - saim durmuşoğlu</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <!-- Form -->
+    <form id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        placeholder="Search images..."
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <!-- Gallery -->
+    <div class="gallery"></div>
 
-    <load src="./partials/footer.html" />
+    <!-- Load more button + loader container -->
+    <div class="button-container hidden">
+      <button id="load-more">Load More</button>
+    </div>
 
+    <!-- Loader -->
+    <span id="loader" class="loader loader-hidden">
+      Loading images, please wait...
+    </span>
+
+    <!-- JS -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>

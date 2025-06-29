@@ -1,0 +1,95 @@
+.loader-hidden {
+  display: none;
+}
+
+#loader {
+  font-size: 48px;
+  color: #2e2f42;
+  /* display: inline-block; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#loader::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 10px 0 #fff, 20px 0 #fff;
+  }
+  50% {
+    box-shadow: 10px 0 #2e2f42, 20px 0 #fff;
+  }
+  100% {
+    box-shadow: 10px 0 #2e2f42, 20px 0 #2e2f42;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 1128px;
+  padding: 0;
+}
+
+.photo-card {
+  position: relative;
+  width: 360px;
+  height: 200px;
+  padding: 0;
+  border: 1px solid #808080;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  z-index: 110;
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  padding: 4px 20px;
+  text-align: center;
+}
+
+.photo-card .info p {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card .info p.b {
+  font-weight: 600;
+  line-height: 1.34;
+}

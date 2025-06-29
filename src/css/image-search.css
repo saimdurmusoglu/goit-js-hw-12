@@ -1,0 +1,97 @@
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 36px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  width: 272px;
+  height: 40px;
+  border: 1px solid #808080;
+  background-color: #fff;
+  color: #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+form input:hover {
+  border-color: #000;
+}
+
+form button {
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+form button:hover {
+  background-color: #6c8cff;
+}
+
+form.button:checked > form.input {
+  color: #2e2f42;
+  border-color: #4e75ff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+}
+
+.photo-card {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 300px;
+}
+
+.photo-card img {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#load-more {
+  width: 125px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.hidden {
+  display: none;
+}
