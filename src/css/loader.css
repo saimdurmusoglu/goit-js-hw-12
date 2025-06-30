@@ -13,6 +13,7 @@
   letter-spacing: 0.04em;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 44px;
 }
 
 #loader::after {

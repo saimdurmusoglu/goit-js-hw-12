@@ -115,9 +115,9 @@ function renderImages(images) {
 }
 
 function smoothScroll() {
-  const { height: cardHeight } = document
-    .querySelector('.gallery a')
-    .getBoundingClientRect();
+  const card = document.querySelector('.gallery a');
+  if (!card) return;
+  const { height: cardHeight } = card.getBoundingClientRect();
   window.scrollBy({
     top: cardHeight * 2,
     behavior: 'smooth',
@@ -161,6 +161,7 @@ form.addEventListener('submit', async e => {
 });
 
 loadMoreBtn.addEventListener('click', async () => {
+  hideLoadMore();
   currentPage++;
   showLoader();
 
@@ -171,8 +172,9 @@ loadMoreBtn.addEventListener('click', async () => {
 
     const maxPages = Math.ceil(totalImages / PER_PAGE);
     if (currentPage >= maxPages) {
-      hideLoadMore();
       showToast("We're sorry, but you've reached the end of search results.");
+    } else {
+      showLoadMore();
     }
   } catch (err) {
     showToast('Could not load more images.', 'error');
